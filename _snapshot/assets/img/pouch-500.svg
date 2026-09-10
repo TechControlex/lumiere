@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" role="img" aria-label="Gut Reset 500 g">
+  <defs>
+    <linearGradient id="body5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e5dccd" />
+      <stop offset=".18" stop-color="#f6f1e6" />
+      <stop offset=".55" stop-color="#ede4d6" />
+      <stop offset=".88" stop-color="#dcd0be" />
+      <stop offset="1" stop-color="#cabca6" />
+    </linearGradient>
+    <linearGradient id="cap5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#24301f" />
+      <stop offset=".2" stop-color="#37452f" />
+      <stop offset=".62" stop-color="#2d3927" />
+      <stop offset="1" stop-color="#1c2517" />
+    </linearGradient>
+    <linearGradient id="sheen5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <clipPath id="bagClip5">
+      <path d="M84 44h252c17 0 28 13 26 30-5 47-7 86-5 135 4 100 11 181 15 271 2 28-9 48-32 50H82c-23-2-34-22-32-50 4-90 11-171 15-271 2-49 0-88-5-135-2-17 9-30 24-30Z" />
+    </clipPath>
+  </defs>
+
+  <rect x="70" y="10" width="280" height="32" rx="8" fill="#2b3623" />
+  <rect x="70" y="10" width="280" height="32" rx="8" fill="url(#sheen5)" opacity=".2" />
+  <circle cx="210" cy="26" r="4" fill="#1c2417" opacity=".35" />
+
+  <path d="M84 44h252c17 0 28 13 26 30-5 47-7 86-5 135 4 100 11 181 15 271 2 28-9 48-32 50H82c-23-2-34-22-32-50 4-90 11-171 15-271 2-49 0-88-5-135-2-17 9-30 24-30Z" fill="url(#body5)" />
+
+  <g clip-path="url(#bagClip5)">
+    <path d="M36 38h348v220H36z" fill="url(#cap5)" />
+    <path d="M36 252h348v10H36z" fill="#a9702c" opacity=".9" />
+    <rect x="50" y="38" width="54" height="524" fill="url(#sheen5)" opacity=".5" />
+    <path d="M50 474c62 22 248 22 310 0v92H50z" fill="#000" opacity=".05" />
+  </g>
+
+  <g fill="#f4f0e6" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+    <text x="210" y="114" font-size="22" letter-spacing="7.5">LUMI&#200;RE</text>
+    <path d="M150 130h120" stroke="#f4f0e6" stroke-opacity=".4" stroke-width="1" />
+    <text x="210" y="184" font-size="43" letter-spacing="-1">Gut Reset</text>
+  </g>
+  <text x="210" y="216" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12.5" letter-spacing="2.6" fill="#dfe6d6">TARM&#8211;HUD AKSEN</text>
+
+  <g fill="#5d574d" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">
+    <text x="210" y="310" font-size="13" letter-spacing="1.4">PROBIOTIKA + PR&#198;BIOTISKE FIBRE</text>
+    <text x="210" y="340" font-size="11" letter-spacing="1" fill="#8b8477">PHGG &#183; INULIN &#183; PSYLLIUM HUSK</text>
+  </g>
+  <g text-anchor="middle">
+    <text x="210" y="408" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="-0.5" fill="#15130f">500 g</text>
+    <text x="210" y="434" font-family="Helvetica, Arial, sans-serif" font-size="11.5" letter-spacing="2" fill="#8b8477">50 PORTIONER</text>
+  </g>
+  <path d="M120 452h180" stroke="#15130f" stroke-opacity=".16" />
+  <text x="210" y="484" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10.5" letter-spacing="1.6" fill="#4c5c44">PLANTEBASERET &#183; TREDJEPARTSTESTET</text>
+</svg>

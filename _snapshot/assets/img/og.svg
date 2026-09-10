@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="LUMIERE Gut Reset">
+  <defs>
+    <radialGradient id="og1" cx=".78" cy=".2" r=".7">
+      <stop offset="0" stop-color="#4c5c44" stop-opacity=".38" />
+      <stop offset="1" stop-color="#4c5c44" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="og2" cx=".12" cy=".9" r=".6">
+      <stop offset="0" stop-color="#a9702c" stop-opacity=".26" />
+      <stop offset="1" stop-color="#a9702c" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ogBag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e7ded0" />
+      <stop offset=".25" stop-color="#f7f2e8" />
+      <stop offset="1" stop-color="#d3c7b3" />
+    </linearGradient>
+    <clipPath id="ogClip">
+      <path d="M92 46h236c16 0 26 12 24 28-4 46-6 84-4 132 4 98 10 178 14 266 2 28-8 48-30 50H88c-22-2-32-22-30-50 4-88 10-168 14-266 2-48 0-86-4-132-2-16 8-28 24-28Z" />
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#f6f2ea" />
+  <rect width="1200" height="630" fill="url(#og1)" />
+  <rect width="1200" height="630" fill="url(#og2)" />
+
+  <g transform="translate(88 96)" fill="#15130f" font-family="Georgia, 'Times New Roman', serif">
+    <g stroke="#4c5c44" stroke-width="2.4" stroke-linecap="round" fill="none" transform="translate(0 -14)">
+      <circle cx="13" cy="13" r="5.4" fill="#4c5c44" stroke="none" />
+      <path d="M13 0v4.6M13 21.4V26M0 13h4.6M21.4 13H26M3.8 3.8l3.3 3.3M18.9 18.9l3.3 3.3M22.2 3.8l-3.3 3.3M7.1 18.9l-3.3 3.3" />
+    </g>
+    <text x="42" y="8" font-size="24" letter-spacing="9">LUMI&#200;RE</text>
+    <text y="146" font-size="80" letter-spacing="-3">Sund hud begynder</text>
+    <text y="232" font-size="80" letter-spacing="-3" font-style="italic" fill="#4c5c44">i tarmen.</text>
+    <text y="308" font-size="25" fill="#5d574d" font-family="Helvetica, Arial, sans-serif">Gut Reset &#8212; probiotika + pr&#230;biotiske fibre. &#201;t scoop dagligt.</text>
+    <text y="384" font-size="17" letter-spacing="2" fill="#8b8477" font-family="Helvetica, Arial, sans-serif">PLANTEBASERET &#183; TREDJEPARTSTESTET &#183; EU-KONFORM</text>
+  </g>
+
+  <g transform="translate(880 118) scale(0.78)">
+    <rect x="78" y="12" width="264" height="30" rx="8" fill="#3f4c38" />
+    <path d="M92 46h236c16 0 26 12 24 28-4 46-6 84-4 132 4 98 10 178 14 266 2 28-8 48-30 50H88c-22-2-32-22-30-50 4-88 10-168 14-266 2-48 0-86-4-132-2-16 8-28 24-28Z" fill="url(#ogBag)" />
+    <g clip-path="url(#ogClip)">
+      <path d="M40 40h340v212H40z" fill="#4a5942" />
+      <path d="M40 246h340v10H40z" fill="#a9702c" />
+    </g>
+    <g fill="#f4f0e6" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif">
+      <text x="210" y="112" font-size="22" letter-spacing="7.5">LUMI&#200;RE</text>
+      <text x="210" y="182" font-size="43">Gut Reset</text>
+    </g>
+    <text x="210" y="360" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#15130f">250 g</text>
+  </g>
+</svg>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="da" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Videnskaben bag Gut Reset | LUMI&Egrave;RE</title>
+<meta name="description" content="S&aring;dan er Gut Reset bygget: pr&aelig;biotiske fibre, Bacillus coagulans og tarm-hud aksen. En &aelig;rlig gennemgang af formlen, tidslinjen og litteraturen.">
+<meta name="theme-color" content="#f6f2ea">
+<link rel="canonical" href="https://www.thelumierelab.com/da/research">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="LUMIÈRE">
+<meta property="og:title" content="Videnskaben bag Gut Reset &mdash; LUMI&Egrave;RE">
+<meta property="og:description" content="Hvorfor formlen er bygget, som den er &mdash; og hvad du realistisk kan forvente.">
+<meta property="og:image" content="assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400..600&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script>
+  try {
+    var t = JSON.parse(localStorage.getItem('lum.theme'));
+    if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Spring til indhold</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c0-8 5-13 16-14 0 11-5 15-11 15-2.5 0-5-.4-5-1Z"/><path d="M9 15c2-3 4.5-5 8-6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 4 6 4 9s-1.4 6.2-4 9M12 3c-2.6 2.8-4 6-4 9s1.4 6.2 4 9"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3h-2.7v11.6a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.3a5.4 5.4 0 1 0 4.5 5.3V8.2a5 5 0 0 0 3.2 1.1V6.6a3.6 3.6 0 0 1-3.2-3.6Z"/></symbol>
+  </defs>
+</svg>
+
+<div class="announce" data-announce>
+  <div class="announce__inner">
+    <span>Fri fragt over 399 kr &middot; Tilmeld nyhedsbrevet og f&aring; <b>15 %</b></span>
+    <button class="announce__close" type="button" data-announce-close aria-label="Luk besked">
+      <svg width="13" height="13" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="brand" href="index.html" aria-label="LUMIERE, til forsiden">
+      <svg class="brand__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/>
+        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/>
+      </svg>
+      <span class="brand__word">Lumi&egrave;re</span>
+    </a>
+    <nav class="nav" aria-label="Hovedmenu">
+      <ul class="nav__list">
+        <li><a class="nav__link" data-nav-link href="shop.html">Butik</a></li>
+        <li><a class="nav__link" data-nav-link href="ritual.html">Ritualer</a></li>
+        <li><a class="nav__link" data-nav-link href="research.html">Videnskab</a></li>
+        <li><a class="nav__link" data-nav-link href="om-os.html">Om os</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Skift tema">
+        <svg aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <button class="icon-btn" type="button" data-cart-trigger aria-label="Kurv">
+        <svg aria-hidden="true"><use href="#i-bag"/></svg>
+        <span class="icon-btn__count" data-cart-count aria-hidden="true">0</span>
+      </button>
+      <a class="btn btn--sm btn--sage header__cta" href="shop.html">
+        <span>Se sortimentet</span>
+      </a>
+      <button class="icon-btn nav-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <span class="nav-toggle__box" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-menu aria-hidden="true">
+  <div class="mobile-menu__top">
+    <span class="brand__word">Lumi&egrave;re</span>
+    <button class="icon-btn" type="button" data-menu-toggle aria-label="Luk menu">
+      <svg aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobilmenu">
+    <ul class="mobile-menu__list">
+      <li><a class="mobile-menu__link" style="--i:0" href="shop.html"><span>01</span>Butik</a></li>
+      <li><a class="mobile-menu__link" style="--i:1" href="ritual.html"><span>02</span>Ritualer</a></li>
+      <li><a class="mobile-menu__link" style="--i:2" href="research.html"><span>03</span>Videnskab</a></li>
+      <li><a class="mobile-menu__link" style="--i:3" href="om-os.html"><span>04</span>Om os</a></li>
+      <li><a class="mobile-menu__link" style="--i:4" href="kontakt.html"><span>05</span>Kontakt</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn--sage btn--full btn--lg" href="shop.html">
+    <span>Se sortimentet</span>
+  </a>
+</div>
+
+<main id="main">
+  <section class="hero hero--page">
+    <div class="hero__aura" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero__copy">
+        <nav class="crumbs" aria-label="Br&oslash;dkrumme">
+          <a href="index.html">Hjem</a> / <span aria-current="page">Videnskab</span>
+        </nav>
+        <span class="eyebrow">Tarm&ndash;hud aksen</span>
+        <h1 class="display">Hvorfor formlen er bygget, <em>som den er</em></h1>
+        <p class="lead">
+          Gut Reset er ikke en tjekliste af trendy ingredienser. Det er et system:
+          fibre der n&aelig;rer bakterierne, botanicals der st&oslash;tter rytmen, og en
+          sporedannende kultur der kan overleve turen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="journal">
+        <a href="artikel.html">
+          <span class="journal__kicker">Tarm&ndash;hud aksen</span>
+          <h3>Hvorfor tarm og hud taler sammen</h3>
+          <p class="fine">Mikrobielle signaler og hudens overflade &mdash; uden kliniske l&oslash;fter.</p>
+        </a>
+        <a href="#form-h">
+          <span class="journal__kicker">Formlen</span>
+          <h3>Hvorfor Gut Reset er bygget, som den er</h3>
+          <p class="fine">PHGG, RS2, psyllium, inulin og sporer. Andele p&aring; siden.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight defer-paint">
+    <div class="wrap wrap--mid prose" data-reveal>
+      <p>
+        Hvis du har pr&oslash;vet cremer, detoxes og probiotika, der ikke rykker noget,
+        er du ikke alene. Mange pulvere er enten underdoserede, d&aring;rligt sammensat
+        eller bygget som markedsf&oslash;ring frem for et system, kroppen kan bruge.
+      </p>
+      <p>
+        Kort fortalt: Gut Reset giver tarmbakterierne det, de lever af. N&aring;r
+        mikrobiomet fermenterer fibre, dannes kortk&aelig;dede fedtsyrer. Det er den
+        mekanisme, litteraturen knytter til tarmens barriere &mdash; og dermed til den
+        forbindelse, man kalder tarm-hud aksen.
+      </p>
+      <div class="note">
+        Alle formuleringer her er baseret p&aring; offentliggjort videnskabelig
+        litteratur om fibre, mikrobiom og tarm-hud aksen. Gut Reset er et
+        kosttilskud, ikke et l&aelig;gemiddel. Individuelle oplevelser varierer.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper defer-paint" aria-labelledby="mech-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Fire mekanismer</span>
+        <h2 id="mech-h">&Eacute;t scoop. <em>Fire opgaver</em></h2>
+        <p class="lead">Formlen er bygget i lag, s&aring; hver del har et job &mdash; og en dosis, der giver mening.</p>
+      </div>
+      <div class="mech" data-reveal-group>
+        <article data-reveal>
+          <span class="mech__n">01 &mdash; Pr&aelig;biotika</span>
+          <h3>N&aelig;r de rigtige bakterier</h3>
+          <p>
+            PHGG, resistent stivelse, inulin, akacie, &aelig;blefiber og baobab er
+            fermenterbare fibre. De optages ikke i tyndtarmen. I tyktarmen
+            omdanner bakterierne dem til butyrat, propionat og acetat.
+          </p>
+        </article>
+        <article data-reveal>
+          <span class="mech__n">02 &mdash; Motilitet</span>
+          <h3>Hold rytmen i gang</h3>
+          <p>
+            Ultrafint psyllium binder vand. Ingef&aelig;r og pebermynte er valgt for
+            deres traditionelle rolle i ford&oslash;jelseskomfort. Mindre stagnation
+            er en del af, hvorfor mange beskriver mindre tyngde efter m&aring;ltider.
+          </p>
+        </article>
+        <article data-reveal>
+          <span class="mech__n">03 &mdash; Botanicals</span>
+          <h3>St&oslash;t kroppens egne veje</h3>
+          <p>
+            M&aelig;lkeb&oslash;tterod indg&aring;r i en lav dosis som daglig st&oslash;tte til ford&oslash;jelsen &mdash;
+            ikke som et &laquo;detox&raquo;-trick. Den er der, fordi formlen skal f&oslash;les
+            komplet, ikke fordi etiketten skulle v&aelig;re l&aelig;ngere.
+          </p>
+        </article>
+        <article data-reveal>
+          <span class="mech__n">04 &mdash; Probiotika</span>
+          <h3>En stamme, der overlever</h3>
+          <p>
+            <i>Bacillus coagulans</i> er sporedannende. Den t&aring;ler mavesyre og varme
+            bedre end mange klassiske m&aelig;lkesyrestammer. M&aring;let er &ge; 5&ndash;10 mia. CFU
+            pr. portion ved udl&oslash;b &mdash; ikke ved produktion.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section defer-paint" aria-labelledby="form-h">
+    <div class="wrap formula">
+      <div class="stack-5" data-reveal="left">
+        <span class="eyebrow">Kompositionen</span>
+        <h2 id="form-h">94 % fibre. <em>Resten har ogs&aring; et job</em></h2>
+        <p class="lead">
+          En portion er 12 g. Fibrene er kernen. Botanicals og smag fylder bevidst
+          lidt, s&aring; de ikke stj&aelig;ler plads fra det, der faktisk flytter noget.
+        </p>
+        <p class="muted">
+          Inulin er doseret til 12 %, fordi det er et af de fibre, folk oftest
+          overdriver. PHGG og RS2 b&aelig;rer tyngden, fordi de er blandt de bedst
+          tolererede og bedst belyste i litteraturen.
+        </p>
+        <a class="link" href="produkt.html">Se fuld deklaration <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="comp" data-reveal="right" data-comp>
+        <div class="comp__row" style="--w:24%">
+          <div class="comp__top"><b>PHGG</b><span>24 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row" style="--w:24%">
+          <div class="comp__top"><b>Resistent stivelse (RS2)</b><span>24 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row" style="--w:16%">
+          <div class="comp__top"><b>Psyllium, ultrafint</b><span>16 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row" style="--w:12%">
+          <div class="comp__top"><b>Inulin</b><span>12 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row" style="--w:10%">
+          <div class="comp__top"><b>Akacie</b><span>10 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row" style="--w:4%">
+          <div class="comp__top"><b>&AElig;blefiber</b><span>4 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row" style="--w:4%">
+          <div class="comp__top"><b>Baobab</b><span>4 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row comp__row--amber" style="--w:3.25%">
+          <div class="comp__top"><b>Ingef&aelig;r, pebermynte, m&aelig;lkeb&oslash;tte</b><span>3,25 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <div class="comp__row comp__row--clay" style="--w:2.75%">
+          <div class="comp__top"><b>Vanilje &amp; munkefrugt</b><span>2,75 %</span></div>
+          <div class="comp__track"><div class="comp__fill"></div></div>
+        </div>
+        <p class="comp__note">Plus Bacillus coagulans, tilsat separat. CFU angives ved udl&oslash;bsdato.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink section--tight defer-paint" aria-labelledby="axis2-h">
+    <div class="wrap split">
+      <div class="stack-5" data-reveal="left">
+        <span class="eyebrow">Forbindelsen</span>
+        <h2 id="axis2-h">N&aring;r tarmen er urolig, <em>viser huden det ofte</em></h2>
+        <p class="lead">
+          Tarm og hud taler sammen via immunsystemet, hormoner og nervesystemet.
+          Det er derfor &aring;r med udvendig pleje kan f&oslash;les som at male over noget,
+          der starter et andet sted.
+        </p>
+      </div>
+      <ul class="checklist" style="grid-template-columns:1fr" data-reveal="right">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Inflammationssignaler kan vise sig som r&oslash;dme og irritation</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tarmens barriere er et veldokumenteret forskningsfelt</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>En stor del af immunsystemet sidder i og omkring tarmen</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Forskellige bakterier giver forskellige metabolitter</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section defer-paint" aria-labelledby="expect-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">&AElig;rlig tidslinje</span>
+        <h2 id="expect-h">Hvad du <em>realistisk</em> kan forvente</h2>
+      </div>
+      <ol class="journey" data-journey>
+        <li class="journey__step">
+          <span class="journey__when">Uge 1</span>
+          <h3>Tilpasning</h3>
+          <p>Let luft, &aelig;ndret rytme &mdash; eller ingenting endnu. Hvis dit fiberindtag er lavt, skal tarmen v&aelig;nne sig.</p>
+          <span class="journey__note">Start med en halv skefuld</span>
+        </li>
+        <li class="journey__step">
+          <span class="journey__when">Uge 2&ndash;4</span>
+          <h3>Rytmen begynder</h3>
+          <p>Her beskriver de fleste mere regelm&aelig;ssighed, mindre tyngde efter m&aring;ltider og mere stabil energi.</p>
+          <span class="journey__note">Fuld dosis fra uge 2</span>
+        </li>
+        <li class="journey__step">
+          <span class="journey__when">Uge 4&ndash;8</span>
+          <h3>Huden f&oslash;lger langsomt</h3>
+          <p>Tarmen kan skifte hurtigt. Huden tager l&aelig;ngere. Mange vurderer ro og f&aelig;rre opblussen her.</p>
+          <span class="journey__note">Biologi, ikke magi</span>
+        </li>
+        <li class="journey__step">
+          <span class="journey__when">Uge 8&ndash;12</span>
+          <h3>Det reelle bevis</h3>
+          <p>Ikke perfekt hud hver dag. Men et st&aelig;rkere udgangspunkt &mdash; hvis formlen passer til dig.</p>
+          <span class="journey__note">Derfor anbefaler vi tre poser</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--paper defer-paint" aria-labelledby="ref-h">
+    <div class="wrap wrap--mid">
+      <div class="section-head">
+        <span class="eyebrow">Litteratur</span>
+        <h2 id="ref-h">Det, vi l&aelig;ner os op ad</h2>
+        <p class="lead">Udvalgte oversigter og mekanismer. Ikke en p&aring;stand om, at Gut Reset er testet i netop disse studier.</p>
+      </div>
+      <ol class="ref-list">
+        <li>O'Neill, C. A. et al. &laquo;The gut-skin axis in health and disease.&raquo; <i>BioEssays</i>, 2016.</li>
+        <li>Salem, I. et al. &laquo;The gut microbiome as a major regulator of the gut-skin axis.&raquo; <i>Frontiers in Microbiology</i>, 2018.</li>
+        <li>Slavin, J. &laquo;Fiber and prebiotics: mechanisms and health benefits.&raquo; <i>Nutrients</i>, 2013.</li>
+        <li>Yoon, S. J. et al. Physiological properties of PHGG. Oversigtslitteratur om tolerabilitet og fermentering.</li>
+        <li>Majeed, M. et al. Bacillus coagulans: sporedannelse, syrestabilitet og ford&oslash;jelseskomfort.</li>
+      </ol>
+      <p class="fine" style="margin-top:1.5rem">
+        Vi anvender ingen uautoriserede sundhedsanprisninger. Formuleret efter
+        EU-direktiv 2002/46/EF om kosttilskud.
+      </p>
+    </div>
+  </section>
+
+  <section class="finale defer-paint" aria-labelledby="rfin-h">
+    <div class="wrap wrap--mid finale__inner">
+      <span class="eyebrow eyebrow--bare">N&aelig;ste skridt</span>
+      <h2 id="rfin-h">L&aelig;s formlen. <em>S&aring; begynd</em></h2>
+      <div class="row" style="justify-content:center">
+        <a class="btn btn--on-ink btn--lg" href="produkt.html">Se Gut Reset</a>
+        <a class="btn btn--on-ink-ghost btn--lg" href="om-os.html">M&oslash;d William</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="stack-4">
+        <a class="brand brand--footer" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/>
+            <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/>
+          </svg>
+          <span class="brand__word">Lumi&egrave;re</span>
+        </a>
+        <p class="fine" style="max-width:34ch">Designet i Danmark. Produceret i certificerede faciliteter. Laboratorietestet i Danmark.</p>
+        <div class="socials">
+          <a class="icon-btn" href="https://www.instagram.com/" aria-label="Instagram" rel="noopener noreferrer nofollow" target="_blank"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a class="icon-btn" href="https://www.tiktok.com/" aria-label="TikTok" rel="noopener noreferrer nofollow" target="_blank"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
+        </div>
+      </div>
+      <nav aria-labelledby="f-shop"><h3 id="f-shop">Butik</h3>
+        <ul class="footer__links">
+          <li><a href="produkt.html">Gut Reset 250 g</a></li>
+          <li><a href="produkt.html#pakker">Gut Reset 500 g</a></li>
+          <li><a href="produkt.html#pakker">12 ugers forl&oslash;b</a></li>
+          <li><a href="kontakt.html#ordre">Spor din ordre</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-disc"><h3 id="f-disc">Opdag</h3>
+        <ul class="footer__links">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="om-os.html">Om os</a></li>
+          <li><a href="kontakt.html#faq">FAQ</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="stack-4">
+        <h3>Deltag i ritualet</h3>
+        <p class="fine">F&aring; 15 % p&aring; din f&oslash;rste ordre. Ingen spam.</p>
+        <form class="subscribe" data-subscribe novalidate>
+          <label class="sr-only" for="nl-mail">Mailadresse</label>
+          <input id="nl-mail" type="email" name="email" placeholder="din@mail.dk" autocomplete="email" required>
+          <button class="btn btn--sm" type="submit">Tilmeld</button>
+        </form>
+        <p class="form-note" data-note role="status"></p>
+        <div class="pay" aria-label="Betalingsmetoder">
+          <span>MobilePay</span><span>Visa</span><span>Mastercard</span><span>Klarna</span>
+          <span>Apple Pay</span><span>Google Pay</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span data-year>2026</span> LUMI&Egrave;RE &middot; CVR 45987493</p>
+      <nav class="footer__legal" aria-label="Juridisk">
+        <a href="kontakt.html#handel">Handelsbetingelser</a>
+        <a href="kontakt.html#privatliv">Privatlivspolitik</a>
+        <a href="kontakt.html#retur">Retur- &amp; fortrydelsesret</a>
+        <a href="kontakt.html#levering">Levering</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" data-overlay aria-hidden="true"></div>
+
+<aside class="drawer" data-cart-drawer role="dialog" aria-modal="true" aria-label="Indk&oslash;bskurv" aria-hidden="true">
+  <div class="drawer__head">
+    <h2>Din kurv</h2>
+    <button class="icon-btn" type="button" data-cart-close aria-label="Luk kurv">
+      <svg aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <div class="ship-bar">
+      <span data-ship-msg>K&oslash;b for 399 kr mere og f&aring; fri fragt</span>
+      <div class="ship-bar__track">
+        <div class="ship-bar__fill" data-ship-fill></div>
+      </div>
+    </div>
+    <div class="drawer__empty" data-cart-empty>
+      <svg aria-hidden="true"><use href="#i-bag"/></svg>
+      <p>Din kurv er tom.</p>
+      <a class="btn btn--ghost btn--sm" href="produkt.html">Se Gut Reset</a>
+    </div>
+    <div data-cart-items></div>
+  </div>
+  <div class="drawer__foot" data-cart-foot hidden>
+    <div class="drawer__sum">
+      <span>Subtotal</span>
+      <strong data-cart-total>0 kr</strong>
+    </div>
+    <button class="btn btn--sage btn--full btn--lg" type="button" data-checkout>
+      <span>G&aring; til sikker betaling</span>
+    </button>
+    <p class="fine" style="text-align:center">MobilePay &middot; kort &middot; Klarna</p>
+  </div>
+</aside>
+
+<div class="toast" data-toast role="status" aria-live="polite">
+  <svg aria-hidden="true"><use href="#i-check"/></svg>
+  <span data-toast-text></span>
+</div>
+
+<script defer src="assets/js/main.js"></script>
+</body>
+</html>
