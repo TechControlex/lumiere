@@ -487,48 +487,11 @@
   var CART_KEY = "lum.cart";
 
   var SOCIAL = {
-    rating: "4,8",
-    count: 512
+    rating: "5,0",
+    count: 74
   };
 
-  var REVIEWS = [
-    {
-      name: "Rasmus",
-      meta: "Verificeret køber · 250 g",
-      initial: "R",
-      text: "Efter to uger er den oppustethed, jeg har kæmpet med i årevis, næsten væk om morgenen. Det smager af vanilje, ikke af straf."
-    },
-    {
-      name: "Sofie",
-      meta: "Verificeret køber · 12 uger",
-      initial: "S",
-      text: "Jeg ville have noget ærligt. Ingen hemmelig blend, ingen råben. Min mave er roligere, og huden føles mindre stram efter et par måneder."
-    },
-    {
-      name: "Mette",
-      meta: "Verificeret køber · 500 g",
-      initial: "M",
-      text: "Endelig et pulver, jeg husker at tage. Tyve sekunder. Posen står ved kaffen. Det er det hele."
-    },
-    {
-      name: "Anders",
-      meta: "Verificeret køber · Odense",
-      initial: "A",
-      text: "Det er det første fibertilskud, jeg ikke har opgivet efter to uger. Det klumper ikke, og jeg kan ikke smage det i havregrøden."
-    },
-    {
-      name: "Line",
-      meta: "Verificeret køber · 9 uger",
-      initial: "L",
-      text: "Jeg satte pris på, at der stod tydeligt på siden, at de første dage kan være urolige. Så vidste jeg, hvad jeg skulle forvente."
-    },
-    {
-      name: "Kasper",
-      meta: "Verificeret køber · 6 måneder",
-      initial: "K",
-      text: "Prisen er i den høje ende, men jeg kan se hele deklarationen, og det er derfor jeg genkøber."
-    }
-  ];
+  var REVIEWS = window.LUMIERE_REVIEWS || [];
 
   var PRODUCTS = {
     "gut-reset": {
@@ -1088,32 +1051,219 @@
     }
   }
 
+  var STAR_SVG =
+    "<svg viewBox='0 0 24 24'><path fill='currentColor' d='m12 2 2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17l-6.1 3.3L7.3 13.6l-5-4.6 6.8-.8L12 2Z'/></svg>";
+
+  function reviewPhotos(r) {
+    var p = r && r.photos;
+    if (!p) return [];
+    return (Array.isArray(p) ? p : [p]).filter(Boolean);
+  }
+
+  function reviewMeta(r) {
+    if (r.meta) return r.meta;
+    var bits = [];
+    if (r.verified) bits.push("Verificeret k\u00f8ber");
+    else bits.push("Kunde");
+    if (r.country) bits.push(r.country);
+    if (r.date) bits.push(r.date);
+    return bits.join(" \u00b7 ");
+  }
+
+  function usableReviews() {
+    return REVIEWS.filter(function (r) {
+      return String(r.text || "").trim() || reviewPhotos(r).length;
+    });
+  }
+
+  function renderReviewCard(r) {
+    var article = document.createElement("article");
+    article.className = "quote";
+    var n = Math.max(1, Math.min(5, parseInt(r.star, 10) || 5));
+    var stars = document.createElement("div");
+    stars.className = "stars";
+    stars.setAttribute("aria-label", n + " ud af 5");
+    stars.innerHTML = STAR_SVG.repeat(n);
+
+    var photos = reviewPhotos(r);
+    if (photos.length) {
+      var row = document.createElement("div");
+      row.className = "quote__photos";
+      photos.forEach(function (src) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "quote__photo";
+        btn.setAttribute("aria-label", "Vis billede st\u00f8rre");
+        var img = document.createElement("img");
+        img.src = src;
+        img.alt = "";
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.setAttribute("data-full", String(src).replace(/style\/trustoo_(?:card_)?small/i, "style/trustoo_big"));
+        btn.appendChild(img);
+        row.appendChild(btn);
+      });
+      article.appendChild(row);
+    }
+
+    article.appendChild(stars);
+
+    var text = String(r.text || "").trim();
+    if (text) {
+      var bq = document.createElement("blockquote");
+      bq.className = "quote__body";
+      bq.textContent = text;
+      article.appendChild(bq);
+      if (text.length > 220) {
+        article.classList.add("is-clamped");
+        var more = document.createElement("button");
+        more.type = "button";
+        more.className = "quote__more";
+        more.textContent = "Vis mere";
+        more.addEventListener("click", function () {
+          var open = article.classList.toggle("is-open");
+          article.classList.toggle("is-clamped", !open);
+          more.textContent = open ? "Vis mindre" : "Vis mere";
+        });
+        article.appendChild(more);
+      }
+    }
+
+    var who = document.createElement("div");
+    who.className = "quote__who";
+    who.innerHTML = "<i></i><div><b></b><span></span></div>";
+    $("i", who).textContent = r.initial || (r.name || "?").charAt(0).toUpperCase();
+    $("b", who).textContent = r.name || "Kunde";
+    if (r.verified) $("b", who).setAttribute("data-verified", "");
+    $("span", who).textContent = reviewMeta(r);
+    article.appendChild(who);
+    return article;
+  }
+
+  function initPhotoZoom() {
+    if ($("[data-photo-zoom]")) return;
+    var box = document.createElement("div");
+    box.className = "photo-zoom";
+    box.setAttribute("data-photo-zoom", "");
+    box.setAttribute("hidden", "");
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Anmeldelse");
+    box.innerHTML =
+      "<button class='photo-zoom__close icon-btn' type='button' aria-label='Luk'>" +
+      "<svg viewBox='0 0 24 24' aria-hidden='true'><path fill='none' stroke='currentColor' stroke-width='1.6' d='M5 5l14 14M19 5 5 19'/></svg>" +
+      "</button>" +
+      "<div class='photo-zoom__panel'>" +
+      "<div class='photo-zoom__media'><img alt=''></div>" +
+      "<div class='photo-zoom__copy'>" +
+      "<div class='stars' data-zoom-stars></div>" +
+      "<blockquote class='photo-zoom__text'></blockquote>" +
+      "<div class='quote__who' data-zoom-who><i></i><div><b></b><span></span></div></div>" +
+      "</div></div>";
+    document.body.appendChild(box);
+    var img = $(".photo-zoom__media img", box);
+    var textEl = $(".photo-zoom__text", box);
+    var starsEl = $("[data-zoom-stars]", box);
+    var who = $("[data-zoom-who]", box);
+    var closeBtn = $(".photo-zoom__close", box);
+
+    function close() {
+      if (box.hidden) return;
+      box.hidden = true;
+      img.removeAttribute("src");
+      textEl.textContent = "";
+      lockScroll(false);
+    }
+
+    function open(btn) {
+      var thumb = $("img", btn);
+      var card = btn.closest(".quote");
+      if (!thumb || !card) return;
+      img.src = thumb.getAttribute("data-full") || thumb.src;
+      var body = $(".quote__body", card);
+      textEl.textContent = body ? body.textContent : "";
+      textEl.hidden = !textEl.textContent;
+      var cardStars = $(".stars", card);
+      starsEl.innerHTML = cardStars ? cardStars.innerHTML : "";
+      var cardWho = $(".quote__who", card);
+      if (cardWho) {
+        $("i", who).textContent = $("i", cardWho).textContent;
+        $("b", who).textContent = $("b", cardWho).textContent;
+        if ($("b", cardWho).hasAttribute("data-verified")) $("b", who).setAttribute("data-verified", "");
+        else $("b", who).removeAttribute("data-verified");
+        $("span", who).textContent = $("span", cardWho).textContent;
+      }
+      box.hidden = false;
+      lockScroll(true);
+      closeBtn.focus({ preventScroll: true });
+    }
+
+    box.addEventListener("click", function (e) {
+      if (e.target === box || e.target.closest(".photo-zoom__close")) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape" || box.hidden) return;
+      e.preventDefault();
+      close();
+    });
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest(".quote__photo");
+      if (!btn) return;
+      open(btn);
+    });
+  }
+
   function initReviews() {
+    var pool = usableReviews();
     $$("[data-reviews]").forEach(function (root) {
       if (root.children.length) return;
       var limit = parseInt(root.getAttribute("data-limit"), 10);
-      var list = REVIEWS.slice(0, limit > 0 ? limit : REVIEWS.length);
-      list.forEach(function (r) {
-        var article = document.createElement("article");
-        article.className = "quote";
-        var stars = document.createElement("div");
-        stars.className = "stars";
-        stars.setAttribute("aria-hidden", "true");
-        stars.innerHTML =
-          "<svg viewBox='0 0 24 24'><path fill='currentColor' d='m12 2 2.9 6.2 6.8.8-5 4.6 1.4 6.7L12 17l-6.1 3.3L7.3 13.6l-5-4.6 6.8-.8L12 2Z'/></svg>".repeat(5);
-        var bq = document.createElement("blockquote");
-        bq.textContent = "\u201c" + r.text + "\u201d";
-        var who = document.createElement("div");
-        who.className = "quote__who";
-        who.innerHTML = "<i></i><div><b></b><span></span></div>";
-        $("i", who).textContent = r.initial;
-        $("b", who).textContent = r.name;
-        $("span", who).textContent = r.meta;
-        article.appendChild(stars);
-        article.appendChild(bq);
-        article.appendChild(who);
-        root.appendChild(article);
-      });
+      var pageSize = parseInt(root.getAttribute("data-page-size"), 10);
+      var layout = root.getAttribute("data-reviews-layout") || "";
+      var list = pool.slice(0, limit > 0 ? limit : pool.length);
+      if (layout === "list") root.classList.add("reviews-list");
+
+      var shown = 0;
+      var step = pageSize > 0 ? pageSize : list.length;
+      var moreBtn = null;
+
+      function paint() {
+        list.slice(shown, shown + step).forEach(function (r) {
+          root.appendChild(renderReviewCard(r));
+        });
+        shown = Math.min(list.length, shown + step);
+        if (moreBtn) moreBtn.hidden = shown >= list.length;
+      }
+
+      if (pageSize > 0 && list.length > pageSize) {
+        moreBtn = document.createElement("button");
+        moreBtn.type = "button";
+        moreBtn.className = "btn btn--ghost reviews-more";
+        moreBtn.textContent = "Vis flere anmeldelser";
+        moreBtn.addEventListener("click", paint);
+        root.insertAdjacentElement("afterend", moreBtn);
+      }
+      paint();
+    });
+  }
+
+  function initHeroFilm() {
+    var video = $("[data-hero-video]");
+    if (!video) return;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      video.pause();
+      video.removeAttribute("autoplay");
+      return;
+    }
+    var play = function () {
+      var run = video.play();
+      if (run && typeof run.catch === "function") run.catch(function () {});
+    };
+    play();
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) video.pause();
+      else play();
     });
   }
 
@@ -1223,6 +1373,7 @@
     initFaq();
     initCompare();
     initReviews();
+    initPhotoZoom();
     initRails();
     initMarquee();
     initDock();
@@ -1237,6 +1388,7 @@
     initPdp();
     initSocial();
     initMedia();
+    initHeroFilm();
   }
 
   if (document.readyState === "loading") {

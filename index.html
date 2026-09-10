@@ -71,10 +71,10 @@
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.8",
+        "ratingValue": "5.0",
         "bestRating": "5",
-        "ratingCount": "512",
-        "reviewCount": "512"
+        "ratingCount": "74",
+        "reviewCount": "74"
       }
     }
   ]
@@ -82,7 +82,7 @@
 </script>
 </head>
 
-<body>
+<body class="page-home">
 <a class="skip-link" href="#main">Spring til indhold</a>
 
 <!-- ================= SVG-symboler ================= -->
@@ -134,10 +134,10 @@
 
     <nav class="nav" aria-label="Hovedmenu">
       <ul class="nav__list">
-        <li><a class="nav__link" data-nav-link href="shop.html">Butik</a></li>
-        <li><a class="nav__link" data-nav-link href="ritual.html">Ritualer</a></li>
-        <li><a class="nav__link" data-nav-link href="research.html">Videnskab</a></li>
-        <li><a class="nav__link" data-nav-link href="om-os.html">Om os</a></li>
+        <li><a class="nav__link" href="#sortiment">Butik</a></li>
+        <li><a class="nav__link" href="#til-mig">Til mig</a></li>
+        <li><a class="nav__link" href="#ritual">S&aring;dan</a></li>
+        <li><a class="nav__link" href="#faq">FAQ</a></li>
       </ul>
     </nav>
 
@@ -152,8 +152,8 @@
         <span class="icon-btn__count" data-cart-count aria-hidden="true">0</span>
       </button>
 
-      <a class="btn btn--sm btn--sage header__cta" href="shop.html">
-        <span>Se sortimentet</span>
+      <a class="btn btn--sm btn--sage header__cta" href="#sortiment">
+        <span>K&oslash;b Gut Reset</span>
       </a>
 
       <button class="icon-btn nav-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
@@ -174,27 +174,38 @@
   </div>
   <nav aria-label="Mobilmenu">
     <ul class="mobile-menu__list">
-      <li><a class="mobile-menu__link" style="--i:0" href="shop.html"><span>01</span>Butik</a></li>
-      <li><a class="mobile-menu__link" style="--i:1" href="ritual.html"><span>02</span>Ritualer</a></li>
-      <li><a class="mobile-menu__link" style="--i:2" href="research.html"><span>03</span>Videnskab</a></li>
-      <li><a class="mobile-menu__link" style="--i:3" href="om-os.html"><span>04</span>Om os</a></li>
-      <li><a class="mobile-menu__link" style="--i:4" href="kontakt.html"><span>05</span>Kontakt</a></li>
+      <li><a class="mobile-menu__link" style="--i:0" href="#sortiment"><span>01</span>Butik</a></li>
+      <li><a class="mobile-menu__link" style="--i:1" href="#til-mig"><span>02</span>Til mig</a></li>
+      <li><a class="mobile-menu__link" style="--i:2" href="#ritual"><span>03</span>S&aring;dan</a></li>
+      <li><a class="mobile-menu__link" style="--i:3" href="#faq"><span>04</span>FAQ</a></li>
+      <li><a class="mobile-menu__link" style="--i:4" href="om-os.html"><span>05</span>Om os</a></li>
     </ul>
   </nav>
-  <a class="btn btn--sage btn--full btn--lg" href="shop.html">
-    <span>Se sortimentet</span>
+  <a class="btn btn--sage btn--full btn--lg" href="#sortiment">
+    <span>K&oslash;b Gut Reset</span>
   </a>
 </div>
 
 <main id="main">
 
   <!-- ================= Hero ================= -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero__aura" aria-hidden="true"></div>
+  <section class="hero hero--film" aria-labelledby="hero-title">
+    <div class="hero__film" aria-hidden="true">
+      <video
+        data-hero-video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/img/bg-hero.png"
+      >
+        <source src="assets/video/lumiere-hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
     <div class="wrap hero__grid">
       <div class="hero__copy">
-        <span class="eyebrow">Tarm&ndash;hud aksen</span>
-
         <h1 class="display hero__title" id="hero-title">
           <span class="line" style="--i:0"><span>Sundhed</span></span>
           <span class="line" style="--i:1"><span>begynder</span></span>
@@ -202,18 +213,17 @@
         </h1>
 
         <p class="lead">
-          Lumi&egrave;re formulerer daglige ritualer til aksen mellem tarm og hud.
-          Gut Reset er det f&oslash;rste kapitel. Sortimentet vokser &mdash; uden at r&aring;be
-          fra hylden.
+          Daglige ritualer. &Eacute;t scoop. Tyve sekunder.
+          Gut Reset er det f&oslash;rste kapitel.
         </p>
 
         <div class="row">
-          <a class="btn btn--sage btn--lg" href="shop.html">
-            <span>Se sortimentet</span>
+          <a class="btn btn--sage btn--lg" href="#sortiment">
+            <span>K&oslash;b Gut Reset</span>
             <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
-          <a class="btn btn--ghost btn--lg" href="research.html">
-            <span>L&aelig;s videnskaben</span>
+          <a class="btn btn--ghost btn--lg" href="#ritual">
+            <span>S&aring;dan virker det</span>
           </a>
         </div>
 
@@ -223,98 +233,186 @@
             <div class="stars" aria-hidden="true">
               <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
             </div>
-            <p class="fine"><span data-rating>4,8</span> af 5 &mdash; <span data-review-count>512</span>+ danskere</p>
+            <p class="fine"><span data-rating>5,0</span> af 5 &mdash; <span data-review-count>74</span> danskere</p>
           </div>
         </div>
 
-        <div class="row">
-          <span class="pill pill--sage"><i></i>Plantebaseret</span>
-          <span class="pill"><svg width="13" height="13" aria-hidden="true"><use href="#i-flask"/></svg>Tredjepartstestet</span>
-          <span class="pill"><svg width="13" height="13" aria-hidden="true"><use href="#i-truck"/></svg>Fri fragt over 399 kr</span>
-        </div>
-
         <a class="scroll-cue" href="#sortiment">
-          <span>Scroll</span>
+          <span>Sortiment</span>
           <span class="scroll-cue__line" aria-hidden="true"></span>
         </a>
       </div>
+    </div>
+  </section>
 
-      <div class="hero__stage">
-        <div class="folio folio--stage" aria-label="Sortiment">
-          <a class="folio__row" href="produkt.html">
-            <span class="folio__n">01</span>
-            <div>
-              <h3>Gut Reset</h3>
-              <p>Dagligt kosttilskud. Fibre og sporer. &Eacute;t scoop.</p>
-            </div>
-            <span class="folio__meta">Fra 229 kr</span>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item"><svg><use href="#i-leaf"/></svg>PHGG 24%</span>
+      <span class="marquee__item"><svg><use href="#i-leaf"/></svg>RS2 24%</span>
+      <span class="marquee__item"><svg><use href="#i-leaf"/></svg>Psyllium ultrafint 16%</span>
+      <span class="marquee__item"><svg><use href="#i-leaf"/></svg>Inulin 12%</span>
+      <span class="marquee__item"><svg><use href="#i-spark"/></svg>Akacie &aelig;blefiber baobab</span>
+      <span class="marquee__item"><svg><use href="#i-flask"/></svg>Bacillus coagulans &ge; 5&ndash;10 mia. CFU</span>
+      <span class="marquee__item"><svg><use href="#i-drops"/></svg>Vanilje &amp; munkefrugt</span>
+      <span class="marquee__item"><svg><use href="#i-check"/></svg>Ingen fyldstoffer</span>
+      <span class="marquee__item"><svg><use href="#i-shield"/></svg>Testet parti for parti</span>
+    </div>
+  </div>
+
+  <section class="trust-strip" aria-label="Kort fortalt">
+    <div class="trust-strip__item">
+      <b>Plantebaseret</b>
+      <span>Fri for gluten, laktose og kunstige s&oslash;demidler</span>
+    </div>
+    <div class="trust-strip__item">
+      <b>Andele p&aring; etiketten</b>
+      <span>PHGG, RS2, psyllium, inulin og sporer</span>
+    </div>
+    <div class="trust-strip__item">
+      <b>Tredjepartstestet</b>
+      <span>Hvert parti Gut Reset, f&oslash;r det sendes</span>
+    </div>
+    <div class="trust-strip__item">
+      <b>4 ugers garanti</b>
+      <span>Skriv, hvis ritualet ikke f&oslash;ltes rigtigt</span>
+    </div>
+  </section>
+
+  <section class="section" id="til-mig" aria-labelledby="fit-h">
+    <div class="wrap wrap--mid">
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Er det til mig?</span>
+        <h2 id="fit-h">Gut Reset er noget for dig, <em>hvis</em></h2>
+      </div>
+      <ul class="checklist" data-reveal>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Du vil arbejde med huden indefra &mdash; ikke med endnu en creme</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Du vil have &eacute;t dagligt ritual p&aring; tyve sekunder</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Du vil kunne l&aelig;se andelene, ikke en hemmelig blend</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Du vil have et plantebaseret kosttilskud uden r&aring;b</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Du har t&aring;lmodighed til uger, ikke til i morgen</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Du vil starte roligt og holde det</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="sortiment" aria-labelledby="shop-h">
+    <div class="wrap">
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Butik</span>
+        <h2 id="shop-h">Gut Reset. <em>Tre m&aring;der at begynde</em></h2>
+        <p class="lead">250 g til fire uger. 500 g til otte. 12 uger, hvis du vil give b&aring;de mave og hudcyklus tid.</p>
+      </div>
+      <div class="shop" data-reveal-group>
+        <article class="shop-card" data-reveal>
+          <a href="produkt.html" class="shop-card__media" aria-label="Gut Reset 250 g">
+            <img src="assets/img/pouch.svg" alt="Gut Reset 250 g pose" width="420" height="560">
           </a>
-          <a class="folio__row" href="produkt.html?p=clear-complexion">
-            <span class="folio__n">02</span>
-            <div>
-              <h3>Clear Complexion</h3>
-              <p>Hud, indefra. Kommer som n&aelig;ste kapitel.</p>
+          <div class="shop-card__body">
+            <span class="shop-card__meta">250 g &middot; 25 portioner</span>
+            <h3><a href="produkt.html">Starter</a></h3>
+            <p>Fire uger. Nok til at finde ud af, om ritualet er dit.</p>
+            <div class="shop-card__foot">
+              <span class="shop-card__price">229 kr<span class="shop-card__was">269 kr</span></span>
+              <button class="btn btn--sm btn--sage" type="button" data-add="starter">L&aelig;g i kurv</button>
             </div>
-            <span class="folio__meta pending">Kommer</span>
+          </div>
+        </article>
+        <article class="shop-card shop-card--featured" data-reveal>
+          <span class="shop-card__flag">Mest valgt</span>
+          <a href="produkt.html" class="shop-card__media" aria-label="Gut Reset 12 ugers forl&oslash;b">
+            <img src="assets/img/pouch.svg" alt="Gut Reset 12 ugers forl&oslash;b" width="420" height="560">
           </a>
-          <a class="folio__row" href="produkt.html?p=kapitel-tre">
-            <span class="folio__n">03</span>
-            <div>
-              <h3>Kapitel tre</h3>
-              <p>N&aelig;ste produkt i linjen.</p>
+          <div class="shop-card__body">
+            <span class="shop-card__meta">3 &times; 250 g &middot; 75 portioner</span>
+            <h3><a href="produkt.html">12 ugers forl&oslash;b</a></h3>
+            <p>Tid til b&aring;de mave og hudcyklus. Spar 108 kr mod tre l&oslash;se poser.</p>
+            <div class="shop-card__foot">
+              <span class="shop-card__price">579 kr<span class="shop-card__was">687 kr</span></span>
+              <button class="btn btn--sm btn--sage" type="button" data-add="transform">L&aelig;g i kurv</button>
             </div>
-            <span class="folio__meta pending">N&aelig;ste kapitel</span>
+          </div>
+        </article>
+        <article class="shop-card" data-reveal>
+          <a href="produkt.html" class="shop-card__media" aria-label="Gut Reset 500 g">
+            <img src="assets/img/pouch-500.svg" alt="Gut Reset 500 g pose" width="420" height="560">
           </a>
+          <div class="shop-card__body">
+            <span class="shop-card__meta">500 g &middot; 50 portioner</span>
+            <h3><a href="produkt.html">Ritual</a></h3>
+            <p>Otte uger i &eacute;n pose. Lavere pris pr. portion, samme formel.</p>
+            <div class="shop-card__foot">
+              <span class="shop-card__price">366 kr<span class="shop-card__was">429 kr</span></span>
+              <button class="btn btn--sm btn--sage" type="button" data-add="ritual">L&aelig;g i kurv</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ritual" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">S&aring;dan virker det</span>
+        <h2 id="how-h">Tre trin. <em>&Eacute;n scoop</em></h2>
+      </div>
+      <div class="numbered numbered--three" data-reveal-group>
+        <div class="numbered__item" data-reveal>
+          <span class="numbered__n">01</span>
+          <h3>N&aelig;r bakterierne</h3>
+          <p>PHGG, RS2, psyllium og inulin. Pr&aelig;biotiske fibre, der n&aring;r tyktarmen. Andele st&aring;r p&aring; etiketten.</p>
+        </div>
+        <div class="numbered__item" data-reveal>
+          <span class="numbered__n">02</span>
+          <h3>Sporer, der t&aring;ler vejen</h3>
+          <p>Bacillus coagulans som sporer &mdash; valgt fordi de t&aring;ler t&oslash;r pulvertid og mavesyre bedre end mange sarte kulturer.</p>
+        </div>
+        <div class="numbered__item" data-reveal>
+          <span class="numbered__n">03</span>
+          <h3>Tyve sekunder</h3>
+          <p>12 g i vand. R&oslash;r. Videre. Et kosttilskud, du kan holde &mdash; ikke et stunt.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--tight" aria-labelledby="media-h">
-    <div class="wrap split">
-      <div data-reveal>
-        <span class="eyebrow">Ritualet</span>
-        <h2 id="media-h">Tyve sekunder. <em>Hver morgen.</em></h2>
-        <p class="lead">
-          &Eacute;t scoop i vand. R&oslash;r. Videre med dagen.
-        </p>
-      </div>
-      <figure class="media-slot" data-media data-reveal="right">
-        <button class="media-slot__play" type="button" data-media-play>
-          <span>Play</span>
-        </button>
-        <figcaption class="media-slot__cap">Scoop &middot; r&oslash;r &middot; videre</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ================= Folio ================= -->
-  <section class="section" id="sortiment" aria-labelledby="folio-h">
+  <section class="section section--sunk" id="forloeb" aria-labelledby="time-h">
     <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Sortiment</span>
-        <h2 id="folio-h">Tre kapitler. <em>&Eacute;t brand</em></h2>
-        <p class="lead">
-          Gut Reset kan k&oslash;bes nu. Clear Complexion og det n&aelig;ste kapitel f&oslash;lger.
-        </p>
-        <a class="link" href="shop.html">&Aring;bn butikken <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Forl&oslash;bet</span>
+        <h2 id="time-h">Hvad der typisk sker <em>over tid</em></h2>
+        <p class="lead">Individuelt. Ingen garantier for et tidspunkt. Gut Reset er et kosttilskud.</p>
       </div>
-      <p class="proof-line">
-        <span><b>Fri fragt</b> over <span data-ship-threshold>399</span> kr</span>
-        <span><b><span data-scoop>12</span> g</b> pr. scoop i Gut Reset</span>
-        <span><b><span data-guarantee>4</span>-ugers</b> tilfredshedsgaranti</span>
-        <span><b>Tredjepartstestet</b> parti for parti</span>
-      </p>
+      <div class="journey" data-journey data-reveal>
+        <article class="journey__step">
+          <span class="journey__when">Dag 1</span>
+          <h3>Ritualet begynder</h3>
+          <p>&Eacute;t scoop. Tyve sekunder. Posen st&aring;r, hvor du husker den.</p>
+        </article>
+        <article class="journey__step">
+          <span class="journey__when">Uge 1&ndash;2</span>
+          <h3>Kroppen v&aelig;nner sig</h3>
+          <p>Fiberindtaget stiger. Mild tilpasning kan forekomme. Start med en halv skefuld, hvis maven er sart.</p>
+        </article>
+        <article class="journey__step">
+          <span class="journey__when">Uge 2&ndash;4</span>
+          <h3>Mange m&aelig;rker maven</h3>
+          <p>De fleste beskriver &aelig;ndringer i ford&oslash;jelsen inden for to til fire uger. Individuelt.</p>
+        </article>
+        <article class="journey__step">
+          <span class="journey__when">Uge 6&ndash;12</span>
+          <h3>Huden kommer senere</h3>
+          <p>Hudens cyklus er uger, ikke dage. Derfor anbefaler vi 12-ugers forl&oslash;bet, hvis du vil give det tid.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- ================= Statistik ================= -->
-  <section class="section section--ink section--tight" aria-labelledby="stats-h">
+  <section class="section section--ink section--tight" id="videnskab" aria-labelledby="stats-h">
     <div class="wrap">
       <div class="section-head section-head--center">
-        <span class="eyebrow">Fundamentet</span>
-        <h2 id="stats-h">Tarmen er ikke et sidespor. Den er <em>udgangspunktet</em></h2>
-        <p class="lead">Tal, der s&aelig;tter rammen &mdash; ikke l&oslash;fter om helbredelse. Gut Reset er et kosttilskud.</p>
+        <span class="eyebrow">Aksen</span>
+        <h2 id="stats-h">Tarmen er <em>udgangspunktet</em></h2>
       </div>
       <div class="stats" data-reveal-group>
         <div class="stat" data-reveal>
@@ -337,463 +435,12 @@
     </div>
   </section>
 
-  <!-- ================= Ritual ================= -->
-  <section class="section" aria-labelledby="method-h">
+  <section class="section" aria-labelledby="rev-h">
     <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Ritualer</span>
-        <h2 id="method-h">Ikke et bundle. En <em>r&aelig;kkef&oslash;lge</em></h2>
-        <p class="lead">
-          Ritualer er redaktionelle forl&oslash;b &mdash; ikke et checkout-trick. Gut Reset
-          er fundamentet. Clear Complexion kommer ind, n&aring;r copy er godkendt.
-        </p>
-      </div>
-      <div class="protocol" data-reveal>
-        <article class="protocol__step">
-          <span class="protocol__n">01</span>
-          <div>
-            <h3>Fundamentet</h3>
-            <p>&Eacute;t scoop Gut Reset om morgenen. Tyve sekunder. Det er hele ritualet, indtil n&aelig;ste kapitel er klar.</p>
-          </div>
-          <a class="protocol__ref" href="produkt.html">Gut Reset</a>
-        </article>
-        <article class="protocol__step">
-          <span class="protocol__n">02</span>
-          <div>
-            <h3>Indefra</h3>
-            <p>N&aring;r Clear Complexion lanceres, l&aelig;gges den ovenp&aring; fundamentet. Ikke i stedet for.</p>
-          </div>
-          <a class="protocol__ref" href="ritual.html">Se ritualerne</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Tarm-hud aksen ================= -->
-  <section class="section section--paper defer-paint" aria-labelledby="axis-h">
-    <div class="wrap split">
-      <div data-reveal="left">
-        <span class="eyebrow">Aksen</span>
-        <h2 id="axis-h">Tarm og hud taler sammen. Vi formulerer til <em>begge ender</em></h2>
-        <p class="lead">
-          Tarm-hud aksen er tovejskommunikation: mikrobiom, immunv&aelig;v, signalstoffer
-          og hudens overflade. Vi formulerer til begge ender &mdash; f&oslash;rst med Gut Reset,
-          siden med flere kapitler.
-        </p>
-        <p class="muted">
-          Vi p&aring;st&aring;r ikke at behandle hudlidelser. Vi bygger et dagligt pulver,
-          du kan holde, med ingredienser der er unders&oslash;gt i litteraturen.
-        </p>
-        <a class="link" href="research.html">
-          <span>L&aelig;s mekanismen</span>
-          <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow"/></svg>
-        </a>
-      </div>
-      <svg class="axis" viewBox="0 0 560 360" role="img" aria-label="Diagram af tarm-hud aksen" data-reveal="right">
-        <rect x="8" y="8" width="544" height="344" rx="22" fill="var(--paper-sunk, #f3eee4)" stroke="var(--line-soft, rgba(21,19,15,.08))"/>
-        <circle cx="130" cy="180" r="78" fill="none" stroke="var(--sage, #4c5c44)" stroke-width="1.4"/>
-        <circle cx="430" cy="180" r="78" fill="none" stroke="var(--amber, #a9702c)" stroke-width="1.4"/>
-        <path class="axis-flow" d="M208 180h144" fill="none" stroke="var(--sage, #4c5c44)" stroke-width="1.6"/>
-        <path d="M342 174l10 6-10 6" fill="none" stroke="var(--sage, #4c5c44)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M218 186l-10-6 10-6" fill="none" stroke="var(--amber, #a9702c)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
-        <text x="130" y="174" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="currentColor">Tarm</text>
-        <text x="130" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" letter-spacing="1.4" fill="var(--ink-40, #8b8477)">MIKROBIOM</text>
-        <text x="430" y="174" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="currentColor">Hud</text>
-        <text x="430" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" letter-spacing="1.4" fill="var(--ink-40, #8b8477)">OVERFLADE</text>
-        <text x="280" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" letter-spacing="1.8" fill="var(--ink-40, #8b8477)">SIGNALER</text>
-        <text x="280" y="322" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="var(--ink-40, #8b8477)">Fibre &middot; sporer &middot; dagligt ritual</text>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ================= Ingredienser ================= -->
-  <section class="section defer-paint" aria-labelledby="ing-h">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Det f&oslash;rste kapitel</span>
-        <h2 id="ing-h">Hvad der er i posen &mdash; og <em>hvorfor</em></h2>
-        <p class="lead">Fem kerner med andele p&aring; etiketten. Resten er fibre, urter og smag. Ingen propriet&aelig;re blandinger.</p>
-      </div>
-
-      <div class="tabs" data-tabs>
-        <div class="tabs__list" role="tablist" aria-label="Ingredienser">
-          <button class="tabs__tab" role="tab" id="t-phgg" aria-controls="p-phgg" aria-selected="true" type="button">
-            PHGG <small>24 %</small>
-          </button>
-          <button class="tabs__tab" role="tab" id="t-rs2" aria-controls="p-rs2" aria-selected="false" tabindex="-1" type="button">
-            RS2 <small>24 %</small>
-          </button>
-          <button class="tabs__tab" role="tab" id="t-psyllium" aria-controls="p-psyllium" aria-selected="false" tabindex="-1" type="button">
-            Psyllium <small>16 %</small>
-          </button>
-          <button class="tabs__tab" role="tab" id="t-inulin" aria-controls="p-inulin" aria-selected="false" tabindex="-1" type="button">
-            Inulin <small>12 %</small>
-          </button>
-          <button class="tabs__tab" role="tab" id="t-bc" aria-controls="p-bc" aria-selected="false" tabindex="-1" type="button">
-            B. coagulans <small>&ge; 5&ndash;10 mia. CFU</small>
-          </button>
-        </div>
-
-        <div>
-          <div class="tabs__panel" role="tabpanel" id="p-phgg" aria-labelledby="t-phgg" tabindex="0">
-            <div class="split split--wide-left" style="align-items:start;gap:2rem">
-              <div class="stack-4">
-                <h3>Partielt hydrolyseret guargummi</h3>
-                <p class="muted">
-                  PHGG er en opl&oslash;selig fiber, valgt fordi den typisk t&aring;les bedre
-                  end mange andre pr&aelig;biotika. Den n&aelig;rer tarmbakterier uden at
-                  fylde glasset med slimet tekstur.
-                </p>
-              </div>
-              <table class="spec">
-                <tbody>
-                  <tr><th scope="row">Andel af formlen</th><td>24 %</td></tr>
-                  <tr><th scope="row">M&aelig;ngde pr. portion</th><td>ca. 2,9 g</td></tr>
-                  <tr><th scope="row">Kilde</th><td>Guarb&oslash;nner, partielt hydrolyseret</td></tr>
-                  <tr><th scope="row">Rolle</th><td>Pr&aelig;biotisk fiber</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="tabs__panel" role="tabpanel" id="p-rs2" aria-labelledby="t-rs2" tabindex="0" hidden>
-            <div class="split split--wide-left" style="align-items:start;gap:2rem">
-              <div class="stack-4">
-                <h3>Resistent stivelse type 2</h3>
-                <p class="muted">
-                  RS2 fra gr&oslash;nne bananer n&aring;r tyktarmen, hvor bakterier kan
-                  fermentere den. En stille, m&aelig;tende fiber &mdash; ikke en s&oslash;d smoothie-base.
-                </p>
-              </div>
-              <table class="spec">
-                <tbody>
-                  <tr><th scope="row">Andel af formlen</th><td>24 %</td></tr>
-                  <tr><th scope="row">M&aelig;ngde pr. portion</th><td>ca. 2,9 g</td></tr>
-                  <tr><th scope="row">Kilde</th><td>Gr&oslash;n banan (Musa paradisiaca)</td></tr>
-                  <tr><th scope="row">Rolle</th><td>Fermenterbar stivelse</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="tabs__panel" role="tabpanel" id="p-psyllium" aria-labelledby="t-psyllium" tabindex="0" hidden>
-            <div class="split split--wide-left" style="align-items:start;gap:2rem">
-              <div class="stack-4">
-                <h3>Ultrafint psyllium husk</h3>
-                <p class="muted">
-                  Finmalede fr&oslash;skaller, der binder vand og giver volumen.
-                  Ultrafint, s&aring; glasset ikke bliver en gel&eacute;klump.
-                </p>
-              </div>
-              <table class="spec">
-                <tbody>
-                  <tr><th scope="row">Andel af formlen</th><td>16 %</td></tr>
-                  <tr><th scope="row">M&aelig;ngde pr. portion</th><td>ca. 1,9 g</td></tr>
-                  <tr><th scope="row">Kilde</th><td>Plantago ovata, ultrafint husk</td></tr>
-                  <tr><th scope="row">Vandbinding</th><td>Ca. 10&times; egen v&aelig;gt</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="tabs__panel" role="tabpanel" id="p-inulin" aria-labelledby="t-inulin" tabindex="0" hidden>
-            <div class="split split--wide-left" style="align-items:start;gap:2rem">
-              <div class="stack-4">
-                <h3>Inulin fra cikorierod</h3>
-                <p class="muted">
-                  Et af de bedst unders&oslash;gte pr&aelig;biotika, vi har. Inulin er en
-                  fruktan, som bifidobakterier gerne fermenterer. Doseret, ikke dumpet.
-                </p>
-              </div>
-              <table class="spec">
-                <tbody>
-                  <tr><th scope="row">Andel af formlen</th><td>12 %</td></tr>
-                  <tr><th scope="row">M&aelig;ngde pr. portion</th><td>ca. 1,4 g</td></tr>
-                  <tr><th scope="row">Kilde</th><td>Cikorierod</td></tr>
-                  <tr><th scope="row">Rolle</th><td>Pr&aelig;biotisk fruktan</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="tabs__panel" role="tabpanel" id="p-bc" aria-labelledby="t-bc" tabindex="0" hidden>
-            <div class="split split--wide-left" style="align-items:start;gap:2rem">
-              <div class="stack-4">
-                <h3>Bacillus coagulans</h3>
-                <p class="muted">
-                  Sporedannende kultur, valgt fordi sporer t&aring;ler t&oslash;r pulvertid
-                  og mavesyre bedre end mange sarte m&aelig;lkesyrebakterier. &ge; 5&ndash;10
-                  milliarder CFU pr. portion ved fremstilling.
-                </p>
-              </div>
-              <table class="spec">
-                <tbody>
-                  <tr><th scope="row">M&aelig;ngde pr. portion</th><td>&ge; 5&ndash;10 mia. CFU</td></tr>
-                  <tr><th scope="row">Form</th><td>T&oslash;rre sporer i pulveret</td></tr>
-                  <tr><th scope="row">Opbevaring</th><td>Rumtemperatur. Ingen k&oslash;ling</td></tr>
-                  <tr><th scope="row">Rolle</th><td>Sporedannende probiotika</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="fine" style="margin-top:2rem">
-        Plus akacie, &aelig;blefiber, baobab, ingef&aelig;r, pebermynte, m&aelig;lkeb&oslash;tte, vanilje og munkefrugt.
-        <a class="link" href="research.html">Se hele kompositionen <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= Før / efter ================= -->
-  <section class="section section--sunk defer-paint" aria-labelledby="comp-h">
-    <div class="wrap split">
-      <div data-reveal="left">
-        <span class="eyebrow">Tolv uger</span>
-        <h2 id="comp-h">Overfladen fort&aelig;ller historien <em>langsomt</em></h2>
-        <p class="lead">
-          En illustration af, hvordan hudens tekstur kan &aelig;ndre sig over uger.
-          Tr&aelig;k i h&aring;ndtaget. Individuelle resultater varierer.
-        </p>
-        <p class="muted">Individuelle resultater varierer. Gut Reset er et kosttilskud, ikke en hudbehandling.</p>
-      </div>
-      <div class="compare" style="--x:52%" data-compare data-reveal="right">
-        <div class="compare__pane">
-          <img src="assets/img/surface-before.svg" alt="Illustration: uj&aelig;vn overflade" width="800" height="600">
-          <span class="compare__label compare__label--l">F&oslash;r</span>
-        </div>
-        <div class="compare__pane compare__pane--after">
-          <img src="assets/img/surface-after.svg" alt="Illustration: roligere overflade efter 12 uger" width="800" height="600">
-          <span class="compare__label compare__label--r">Efter 12 uger</span>
-        </div>
-        <div class="compare__handle" aria-hidden="true">
-          <div class="compare__grip">
-            <svg><use href="#i-lr"/></svg>
-          </div>
-        </div>
-        <input class="compare__range" type="range" min="0" max="100" value="52" aria-label="Sammenlign f&oslash;r og efter 12 uger">
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Standarden ================= -->
-  <section class="section defer-paint" aria-labelledby="trust-h">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Standarden</span>
-        <h2 id="trust-h">Samme krav til hvert kapitel. <em>Ikke kun det f&oslash;rste</em></h2>
-        <p class="lead">Tredjepartstest, deklaration og garanti &mdash; ogs&aring; n&aring;r sortimentet vokser.</p>
-      </div>
-      <ul class="rules" data-reveal>
-        <li>
-          <b>Test</b>
-          <span>Hvert parti Gut Reset testes uafh&aelig;ngigt, f&oslash;r det sendes. Analysecertifikat kan rekvireres.</span>
-        </li>
-        <li>
-          <b>EU-regler</b>
-          <span>Kosttilskud under europ&aelig;isk f&oslash;devarelov. Ingen sygdomsanprisninger.</span>
-        </li>
-        <li>
-          <b>Deklaration</b>
-          <span>Ingen fyldstoffer, ingen propriet&aelig;re blandinger. Andele st&aring;r p&aring; siden.</span>
-        </li>
-        <li>
-          <b>Garanti</b>
-          <span><span data-guarantee>4</span>-ugers tilfredshedsgaranti ved daglig brug. Skriv, hvis det ikke f&oslash;ltes rigtigt.</span>
-        </li>
-      </ul>
-      <p class="fine" style="margin-top:1.5rem">
-        <a class="link" href="standards.html">L&aelig;s hele standarden <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= Forskellen ================= -->
-  <section class="section section--paper defer-paint" aria-labelledby="diff-h">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Hvorfor Lumi&egrave;re</span>
-        <h2 id="diff-h">Hvorfor det her ikke er <em>endnu et pulver</em></h2>
-      </div>
-      <div class="numbered" data-reveal-group>
-        <div class="numbered__item" data-reveal>
-          <span class="numbered__n">01</span>
-          <h3>Et ritual, ikke et stunt</h3>
-          <p>&Eacute;t scoop om dagen. Tyve sekunder. Bygget til den, der bliver &mdash; ikke til den, der klikker &eacute;n gang.</p>
-        </div>
-        <div class="numbered__item" data-reveal>
-          <span class="numbered__n">02</span>
-          <h3>Andele p&aring; etiketten</h3>
-          <p>PHGG, RS2, psyllium, inulin og sporer. Ingen &laquo;proprietary blend&raquo;. Du kan l&aelig;se, hvad du tager.</p>
-        </div>
-        <div class="numbered__item" data-reveal>
-          <span class="numbered__n">03</span>
-          <h3>Testet parti for parti</h3>
-          <p>Uafh&aelig;ngig kontrol f&oslash;r frigivelse. Vi viser papiret, hvis du beder om det.</p>
-        </div>
-        <div class="numbered__item" data-reveal>
-          <span class="numbered__n">04</span>
-          <h3>Designet i Danmark</h3>
-          <p>Skandinavisk ro. Vanilje og munkefrugt, s&aring; det smager af noget, du vil tage i morgen.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Produkter ================= -->
-  <section class="section defer-paint" aria-labelledby="shop-h">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Det f&oslash;rste kapitel</span>
-        <h2 id="shop-h">Gut Reset, hvis du vil <em>begynde</em></h2>
-        <p class="lead">250 g r&aelig;kker til fire uger. De fleste vurderer resultatet efter otte til tolv &mdash; derfor er 12-ugers forl&oslash;bet vores anbefaling.</p>
-      </div>
-
-      <div class="shop" data-reveal-group>
-        <article class="shop-card" data-reveal>
-          <a href="produkt.html" class="shop-card__media" aria-label="Gut Reset 250 g">
-            <img src="assets/img/pouch.svg" alt="Gut Reset 250 g pose" width="420" height="560">
-          </a>
-          <div class="shop-card__body">
-            <span class="shop-card__meta">250 g &middot; 25 portioner</span>
-            <h3><a href="produkt.html">Starter</a></h3>
-            <p>Fire uger. Nok til at finde ud af, om ritualet er dit.</p>
-            <div class="shop-card__foot">
-              <span class="shop-card__price">229 kr<span class="shop-card__was">269 kr</span></span>
-              <button class="btn btn--sm btn--sage" type="button" data-add="starter">L&aelig;g i kurv</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="shop-card shop-card--featured" data-reveal>
-          <span class="shop-card__flag">Mest valgt</span>
-          <a href="produkt.html#koeb" class="shop-card__media" aria-label="Gut Reset 12 ugers forl&oslash;b">
-            <img src="assets/img/pouch.svg" alt="Gut Reset 12 ugers forl&oslash;b" width="420" height="560">
-          </a>
-          <div class="shop-card__body">
-            <span class="shop-card__meta">3 &times; 250 g &middot; 75 portioner</span>
-            <h3><a href="produkt.html">12 ugers forl&oslash;b</a></h3>
-            <p>Tid til b&aring;de mave og hudcyklus. Spar 108 kr mod tre l&oslash;se poser.</p>
-            <div class="shop-card__foot">
-              <span class="shop-card__price">579 kr<span class="shop-card__was">687 kr</span></span>
-              <button class="btn btn--sm btn--sage" type="button" data-add="transform">L&aelig;g i kurv</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="shop-card" data-reveal>
-          <a href="produkt.html" class="shop-card__media" aria-label="Gut Reset 500 g">
-            <img src="assets/img/pouch-500.svg" alt="Gut Reset 500 g pose" width="420" height="560">
-          </a>
-          <div class="shop-card__body">
-            <span class="shop-card__meta">500 g &middot; 50 portioner</span>
-            <h3><a href="produkt.html">Ritual</a></h3>
-            <p>Otte uger i &eacute;n pose. Lavere pris pr. portion, samme formel.</p>
-            <div class="shop-card__foot">
-              <span class="shop-card__price">366 kr<span class="shop-card__was">429 kr</span></span>
-              <button class="btn btn--sm btn--sage" type="button" data-add="ritual">L&aelig;g i kurv</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Køb ================= -->
-  <section class="section defer-paint" id="koeb" aria-labelledby="buy-h">
-    <div class="wrap split split--wide-right" style="align-items:start">
-      <div data-reveal>
-        <span class="eyebrow">K&oslash;b</span>
-        <h2 id="buy-h">&Eacute;t scoop dagligt. <em>Resten passer sig selv</em></h2>
-        <p class="lead">
-          12 g pulver i vand, m&aelig;lk, smoothie eller morgenmadssk&aring;l.
-          Ingen k&oslash;ling. Posen st&aring;r, hvor du husker den.
-        </p>
-        <ul class="buy__meta" style="margin-top:1.25rem">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>12 g pulver i vand, m&aelig;lk, smoothie eller morgenmadssk&aring;l</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ingen k&oslash;ling n&oslash;dvendig &mdash; posen st&aring;r, hvor du husker den</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Vanilje og munkefrugt. Plantebaseret. Fri for gluten og laktose</li>
-        </ul>
-      </div>
-
-      <form class="buy" data-reveal="right" onsubmit="return false">
-        <div>
-          <p class="fine" style="margin-bottom:.35rem">Gut Reset &middot; kosttilskud</p>
-          <div class="buy__price">
-            <span class="buy__now" data-price>229 kr</span>
-            <span class="buy__was" data-was>269 kr</span>
-            <span class="buy__per" data-per>9 kr pr. portion</span>
-          </div>
-        </div>
-
-        <fieldset class="options" style="border:0;padding:0;margin:0">
-          <legend class="sr-only">V&aelig;lg st&oslash;rrelse</legend>
-
-          <label class="option">
-            <input type="radio" name="variant" value="starter" checked>
-            <span class="option__dot" aria-hidden="true"></span>
-            <span class="option__body">
-              <b>250 g &mdash; Starter</b>
-              <span>1 pose &middot; 25 portioner &middot; 4 uger</span>
-            </span>
-            <span class="option__price">
-              <b>229 kr</b>
-              <span>269 kr</span>
-            </span>
-          </label>
-
-          <label class="option">
-            <input type="radio" name="variant" value="transform">
-            <span class="option__flag">Mest valgt</span>
-            <span class="option__dot" aria-hidden="true"></span>
-            <span class="option__body">
-              <b>12 ugers forl&oslash;b</b>
-              <span>3 &times; 250 g &middot; 75 portioner &middot; spar 108 kr</span>
-            </span>
-            <span class="option__price">
-              <b>579 kr</b>
-              <span>687 kr</span>
-            </span>
-          </label>
-
-          <label class="option">
-            <input type="radio" name="variant" value="ritual">
-            <span class="option__dot" aria-hidden="true"></span>
-            <span class="option__body">
-              <b>500 g &mdash; Ritual</b>
-              <span>1 pose &middot; 50 portioner &middot; 8 uger</span>
-            </span>
-            <span class="option__price">
-              <b>366 kr</b>
-              <span>429 kr</span>
-            </span>
-          </label>
-        </fieldset>
-
-        <button class="btn btn--sage btn--lg btn--full" type="button" data-add="selected">
-          <span>L&aelig;g i kurv</span>
-          <svg width="17" height="17" aria-hidden="true"><use href="#i-arrow"/></svg>
-        </button>
-
-        <ul class="buy__meta">
-          <li><svg aria-hidden="true"><use href="#i-truck"/></svg>Fri fragt over 399 kr &middot; afsendes hverdage inden kl. 14</li>
-          <li><svg aria-hidden="true"><use href="#i-shield"/></svg>4-ugers tilfredshedsgaranti</li>
-          <li><svg aria-hidden="true"><use href="#i-lock"/></svg>Sikker betaling &middot; MobilePay, kort, Klarna</li>
-        </ul>
-      </form>
-    </div>
-  </section>
-
-  <!-- ================= Anmeldelser ================= -->
-  <section class="section section--sunk defer-paint" aria-labelledby="rev-h">
-    <div class="wrap">
-      <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;max-width:none">
-        <div>
-          <span class="eyebrow">Stemmer</span>
-          <h2 id="rev-h">Hvad folk <em>faktisk skriver</em></h2>
-          <p class="review-origin" style="margin-top:.4rem"><span data-rating>4,8</span> / 5 &middot; <span data-review-count>512</span> verificerede anmeldelser</p>
-        </div>
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Stemmer</span>
+          <h2 id="rev-h">Hvad kunderne <em>synes</em></h2>
+        <p class="fine" style="margin-top:.4rem"><span data-rating>5,0</span> / 5 &middot; <span data-review-count>74</span> anmeldelser</p>
         <div class="rail-nav">
           <button class="icon-btn" type="button" data-rail-prev="rev" aria-label="Forrige citat">
             <svg aria-hidden="true"><use href="#i-arrow-l"/></svg>
@@ -803,95 +450,11 @@
           </button>
         </div>
       </div>
-      <div class="rail" data-rail="rev">
-        <article class="quote">
-          <div class="stars" aria-hidden="true">
-            <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
-          </div>
-          <blockquote>
-            &ldquo;Efter to uger er den oppustethed, jeg har k&aelig;mpet med i &aring;revis, n&aelig;sten v&aelig;k om morgenen. Det smager af vanilje, ikke af straf.&rdquo;
-          </blockquote>
-          <div class="quote__who">
-            <i>R</i>
-            <div>
-              <b>Rasmus</b>
-              <span>Verificeret k&oslash;ber &middot; 250 g</span>
-            </div>
-          </div>
-        </article>
-        <article class="quote">
-          <div class="stars" aria-hidden="true">
-            <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
-          </div>
-          <blockquote>
-            &ldquo;Jeg ville have noget &aelig;rligt. Ingen hemmelig blend, ingen r&aring;ben. Min mave er roligere, og huden f&oslash;les mindre stram efter et par m&aring;neder.&rdquo;
-          </blockquote>
-          <div class="quote__who">
-            <i>S</i>
-            <div>
-              <b>Sofie</b>
-              <span>Verificeret k&oslash;ber &middot; 12 uger</span>
-            </div>
-          </div>
-        </article>
-        <article class="quote">
-          <div class="stars" aria-hidden="true">
-            <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
-          </div>
-          <blockquote>
-            &ldquo;Endelig et pulver, jeg husker at tage. Tyve sekunder. Posen st&aring;r ved kaffen. Det er det hele.&rdquo;
-          </blockquote>
-          <div class="quote__who">
-            <i>M</i>
-            <div>
-              <b>Mette</b>
-              <span>Verificeret k&oslash;ber &middot; 500 g</span>
-            </div>
-          </div>
-        </article>
-      </div>
+      <div class="rail" data-rail="rev" data-reviews></div>
     </div>
   </section>
 
-  <!-- ================= Founder ================= -->
-  <section class="section defer-paint" aria-labelledby="found-h">
-    <div class="wrap wrap--mid pull" data-reveal>
-      <svg width="26" height="26" style="color:var(--sage)" aria-hidden="true"><use href="#i-spark"/></svg>
-      <h2 id="found-h" class="sr-only">William</h2>
-      <blockquote>De fleste har ikke brug for flere produkter. De har brug for et ritual, de kan stole p&aring;.</blockquote>
-      <cite>&mdash; William, grundl&aelig;gger</cite>
-      <a class="link" href="om-os.html">
-        <span>L&aelig;s historien</span>
-        <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- ================= Videnskab ================= -->
-  <section class="section defer-paint" aria-labelledby="jour-h">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Videnskab</span>
-        <h2 id="jour-h">Research er ikke en <em>blog i kælderen</em></h2>
-        <p class="lead">Lange tekster, der forklarer formlen &mdash; uden at love sygdomsbehandling.</p>
-      </div>
-      <div class="journal" data-reveal>
-        <a href="artikel.html">
-          <span class="journal__kicker">Tarm&ndash;hud aksen</span>
-          <h3>Hvorfor tarm og hud taler sammen</h3>
-          <p class="fine">Mikrobielle signaler, immunv&aelig;v og hudens overflade &mdash; uden kliniske l&oslash;fter.</p>
-        </a>
-        <a href="research.html">
-          <span class="journal__kicker">Formlen</span>
-          <h3>Hvorfor Gut Reset er bygget, som den er</h3>
-          <p class="fine">PHGG, RS2, psyllium, inulin og sporer. Andele p&aring; siden.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FAQ ================= -->
-  <section class="section section--paper defer-paint" aria-labelledby="faq-h">
+  <section class="section section--paper" id="faq" aria-labelledby="faq-h">
     <div class="wrap wrap--mid">
       <div class="section-head">
         <span class="eyebrow">FAQ</span>
@@ -901,88 +464,83 @@
         <div class="faq__item">
           <h3 style="font-size:inherit;margin:0">
             <button class="faq__q" type="button" aria-expanded="false" aria-controls="fq1">
-              Hvor lang tid g&aring;r der, f&oslash;r jeg m&aelig;rker noget?
+              Hvor lang tid g&aring;r der, f&oslash;r jeg ser resultater?
               <span class="faq__sign" aria-hidden="true"></span>
             </button>
           </h3>
-          <div class="faq__a" id="fq1"><div><p>De fleste beskriver &aelig;ndringer i ford&oslash;jelsen inden for to til fire uger. En forskel i huden kommer typisk senere &mdash; omkring uge seks til tolv med daglig brug. Individuelt. Ingen garantier for et tidspunkt.</p></div></div>
+          <div class="faq__a" id="fq1"><div><p>De fleste oplever &aelig;ndringer i ford&oslash;jelsen inden for 2-4 uger. Forbedringer i huden bliver typisk synlige efter 6-12 uger med konsekvent daglig brug. Tarmmikrobiomet tager tid at &aelig;ndre &mdash; men det bel&oslash;nner t&aring;lmodighed.</p></div></div>
         </div>
         <div class="faq__item">
           <h3 style="font-size:inherit;margin:0">
             <button class="faq__q" type="button" aria-expanded="false" aria-controls="fq2">
-              Hvordan tager jeg Gut Reset?
+              Hvorfor skal jeg bruge 3 poser til et fuldt program?
               <span class="faq__sign" aria-hidden="true"></span>
             </button>
           </h3>
-          <div class="faq__a" id="fq2"><div><p>&Eacute;t scoop (12 g) i et glas koldt vand, m&aelig;lk eller smoothie. R&oslash;r i tyve sekunder. Gerne om morgenen, men tidspunktet er dit. Tag det mindst to timer fra medicin.</p></div></div>
+          <div class="faq__a" id="fq2"><div><p>Hver pose &aacute; 250 g indeholder 25 portioner &mdash; nok til cirka 4 uger. De bedste resultater ses efter 8-12 uger, og derfor er den 12-ugers transformation (3 poser) vores mest anbefalede valg.</p></div></div>
         </div>
         <div class="faq__item">
           <h3 style="font-size:inherit;margin:0">
             <button class="faq__q" type="button" aria-expanded="false" aria-controls="fq3">
-              Kan jeg tage det med en sart mave?
+              Kan jeg tage det, hvis jeg har en sart mave?
               <span class="faq__sign" aria-hidden="true"></span>
             </button>
           </h3>
-          <div class="faq__a" id="fq3"><div><p>PHGG og akacie er valgt netop for tolerabilitet. Start med en halv skefuld den f&oslash;rste uge. Mild oppustethed i starten er normalt, n&aring;r fiberindtaget stiger.</p></div></div>
+          <div class="faq__a" id="fq3"><div><p>Ja. Gut Reset er formuleret med sk&aring;nsomme fibre, herunder PHGG, som er specifikt udvalgt for dets tolerabilitet i f&oslash;lsomme ford&oslash;jelsessystemer. Nogle oplever mild oppustethed de f&oslash;rste par dage &mdash; dette er normalt og forsvinder typisk inden for en uge.</p></div></div>
         </div>
         <div class="faq__item">
           <h3 style="font-size:inherit;margin:0">
             <button class="faq__q" type="button" aria-expanded="false" aria-controls="fq4">
-              Er den vegansk og fri for allergener?
+              Hvorn&aring;r og hvordan skal jeg tage den?
               <span class="faq__sign" aria-hidden="true"></span>
             </button>
           </h3>
-          <div class="faq__a" id="fq4"><div><p>Plantebaseret og fri for gluten, laktose, soja og kunstige s&oslash;demidler. S&oslash;det med munkefrugt. Har du sv&aelig;r allergi, s&aring; skriv til os f&oslash;rst.</p></div></div>
+          <div class="faq__a" id="fq4"><div><p>Tils&aelig;t en skefuld (12 g) til vand, m&aelig;lk, en smoothie eller din morgenmadssk&aring;l. Bland godt og indtag dagligt. Konsistens betyder mere end timing &mdash; v&aelig;lg et tidspunkt p&aring; dagen, som du kan holde dig til.</p></div></div>
         </div>
         <div class="faq__item">
           <h3 style="font-size:inherit;margin:0">
             <button class="faq__q" type="button" aria-expanded="false" aria-controls="fq5">
-              Kan jeg tage den sammen med anden medicin?
+              Er Gut Reset vegansk og allergenfri?
               <span class="faq__sign" aria-hidden="true"></span>
             </button>
           </h3>
-          <div class="faq__a" id="fq5"><div><p>Fibre kan p&aring;virke optagelsen af andre stoffer. Tag Gut Reset mindst to timer fra din medicin, og tal med din l&aelig;ge, hvis du er i fast behandling. Det er et kosttilskud, ikke et l&aelig;gemiddel.</p></div></div>
+          <div class="faq__a" id="fq5"><div><p>Ja, Gut Reset er plantebaseret og fri for gluten, laktose, soja og kunstige s&oslash;destoffer. Det er naturligt s&oslash;det med munkefrugtekstrakt.</p></div></div>
         </div>
         <div class="faq__item">
           <h3 style="font-size:inherit;margin:0">
             <button class="faq__q" type="button" aria-expanded="false" aria-controls="fq6">
-              Hvad hvis det ikke virker for mig?
+              Erstatter det min hudplejerutine?
               <span class="faq__sign" aria-hidden="true"></span>
             </button>
           </h3>
-          <div class="faq__a" id="fq6"><div><p>Har du brugt produktet dagligt i 4 uger uden at m&aelig;rke forskel, s&aring; skriv. Vi st&aring;r bag formlen og finder en l&oslash;sning &mdash; det er vores 4-ugers tilfredshedsgaranti.</p></div></div>
+          <div class="faq__a" id="fq6"><div><p>Nej &mdash; Gut Reset virker indefra for at st&oslash;tte de forhold, der g&oslash;r din hud i stand til at fungere bedre. Det komplementerer din eksisterende hudpleje, det erstatter den ikke.</p></div></div>
         </div>
         <div class="faq__item">
           <h3 style="font-size:inherit;margin:0">
             <button class="faq__q" type="button" aria-expanded="false" aria-controls="fq7">
-              Hvad koster fragt, og hvorn&aring;r sendes min ordre?
+              Hvad nu hvis det ikke virker for mig?
               <span class="faq__sign" aria-hidden="true"></span>
             </button>
           </h3>
-          <div class="faq__a" id="fq7"><div><p>Danmark: 39 kr, fri over 399 kr. Ordrer inden kl. 14 p&aring; hverdage afsendes samme dag, n&aring;r lageret tillader det. Typisk 1&ndash;3 hverdage. EU: se handelsbetingelserne.</p></div></div>
+          <div class="faq__a" id="fq7"><div><p>Vi st&aring;r bag videnskaben og formlen. Hvis du har v&aelig;ret konsekvent i mindst 4 uger og ikke har bem&aelig;rket nogen &aelig;ndring, bedes du kontakte os direkte &mdash; vi vil samarbejde med dig om at finde en l&oslash;sning.</p></div></div>
         </div>
       </div>
-      <p class="fine" style="margin-top:1.5rem">
-        Flere sp&oslash;rgsm&aring;l?
-        <a class="link" href="kontakt.html#faq">Se hele FAQ <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </p>
     </div>
   </section>
 
-  <!-- ================= Finale ================= -->
-  <section class="finale defer-paint" aria-labelledby="fin-h">
+  <section class="finale" aria-labelledby="fin-h">
     <div class="wrap wrap--mid finale__inner">
       <svg width="26" height="26" style="color:var(--sage-bright, #9db98f)" aria-hidden="true"><use href="#i-spark"/></svg>
       <span class="eyebrow eyebrow--bare">Lumi&egrave;re</span>
       <h2 id="fin-h">Forandringen begynder <em>indefra</em></h2>
       <p class="lead">Et ritual, du kan holde. Ikke endnu et r&aring;bende kosttilskud.</p>
       <div class="row" style="justify-content:center">
-        <a class="btn btn--on-ink btn--lg" href="shop.html">
-          <span>Se sortimentet</span>
+        <a class="btn btn--on-ink btn--lg" href="#sortiment">
+          <span>K&oslash;b Gut Reset</span>
           <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
-        <a class="btn btn--on-ink-ghost btn--lg" href="produkt.html">
-          <span>K&oslash;b Gut Reset</span>
+        <a class="btn btn--on-ink-ghost btn--lg" href="om-os.html">
+          <span>Om os</span>
         </a>
       </div>
       <ul class="trust-row">
@@ -993,7 +551,6 @@
       </ul>
     </div>
   </section>
-
 </main>
 
 <!-- ================= Footer ================= -->
@@ -1113,6 +670,7 @@
   <span data-toast-text></span>
 </div>
 
+<script defer src="assets/js/reviews.js"></script>
 <script defer src="assets/js/main.js"></script>
 </body>
 </html>

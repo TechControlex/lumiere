@@ -164,7 +164,7 @@
         </a>
       </div>
       <p class="proof-line" style="margin-top:2.5rem">
-        <span><b><span data-rating>4,8</span> / 5</b> &middot; <span data-review-count>512</span> anmeldelser</span>
+        <span><b><span data-rating>5,0</span> / 5</b> &middot; <span data-review-count>74</span> anmeldelser</span>
         <span><b>Fri fragt</b> over <span data-ship-threshold>399</span> kr</span>
         <span><b><span data-scoop>12</span> g</b> pr. scoop i Gut Reset</span>
         <span><b><span data-guarantee>4</span>-ugers</b> tilfredshedsgaranti</span>
@@ -174,12 +174,22 @@
 
   <section class="section section--sunk defer-paint" aria-labelledby="srev-h">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Stemmer</span>
-        <h2 id="srev-h">Samme reviews som i <em>butikken</em></h2>
-        <p class="review-origin"><span data-rating>4,8</span> / 5 &middot; <span data-review-count>512</span> verificerede anmeldelser</p>
+      <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;max-width:none">
+        <div>
+          <span class="eyebrow">Stemmer</span>
+          <h2 id="srev-h">Samme reviews som i <em>butikken</em></h2>
+          <p class="review-origin"><span data-rating>5,0</span> / 5 &middot; <span data-review-count>74</span> verificerede anmeldelser</p>
+        </div>
+        <div class="rail-nav">
+          <button class="icon-btn" type="button" data-rail-prev="shop" aria-label="Forrige anmeldelse">
+            <svg aria-hidden="true"><use href="#i-arrow-l"/></svg>
+          </button>
+          <button class="icon-btn" type="button" data-rail-next="shop" aria-label="N&aelig;ste anmeldelse">
+            <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+          </button>
+        </div>
       </div>
-      <div class="rail" data-rail="shop" data-reviews data-limit="4"></div>
+      <div class="rail" data-rail="shop" data-reviews></div>
     </div>
   </section>
 
@@ -316,6 +326,7 @@
   <span data-toast-text></span>
 </div>
 
+<script defer src="assets/js/reviews.js"></script>
 <script defer src="assets/js/main.js"></script>
 </body>
 </html>
