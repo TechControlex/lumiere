@@ -1142,11 +1142,11 @@ h2 em {
   max-width: 34rem;
   margin-bottom: 10cm;
   margin-left: -5cm;
-  text-shadow: 0 1px 24px color-mix(in srgb, var(--bone) 80%, transparent);
 }
 
 .hero--film .hero__title {
   --fs-display: clamp(2.55rem, 1.15rem + 4.4vw, 5rem);
+  text-shadow: none;
 }
 
 .hero--film .hero__copy .lead {
